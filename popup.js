@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var extractButton = document.getElementById('extractButton');
+  var resultDiv = document.getElementById('result');
 
   extractButton.addEventListener('click', function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -7,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
       var url = tab.url;
       var title = tab.title;
 
-      // 클립보드에 URL과 타이틀 복사
-      copyToClipboard('<A href ="' + url + '"</A>' + '## ' + title);
+      // 클립보드에 URL과 타이틀 복사      
+      copyToClipboard('<A href =' + url + '>##</A>' + ' ' + title);      
+      resultDiv.innerHTML = '<A href =' + url + '>##</A>' + ' ' + title; 		
     });
   });
 
