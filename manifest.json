@@ -10,16 +10,21 @@
     }
    ]
   
+  "permissions": [ // 확장 프로그램 필요 권한
+    "activeTab",
+  ],
+
+  "browser_action": {
+    "default_title": "Get URL and Title",
+    "default_popup": "popup.html"
+  },
+
   
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [ // 확장 프로그램 필요 권한
-    "storage",
-    "activeTab",
-    "scripting"
-  ],
-  "action": {
+
+"action": {
     "default_popup": "popup.html", // 확장 프로그램 클릭하면 표시되는 팝업
     "default_icon": {
       "16": "/images/icons8-color-16.png",
@@ -28,6 +33,7 @@
       "128": "/images/icons8-color-128.png"
     }
   },
+
   "icons": {
     "16": "/images/icons8-color-16.png",
     "32": "/images/icons8-color-32.png",
