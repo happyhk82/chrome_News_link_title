@@ -1,45 +1,23 @@
 {
-  "name": "Chrome Extension News link title copy",
-  "description": "News link & title copy",
+  "manifest_version": 2,
+  "name": "URL and Title Extractor",
   "version": "1.0",
-  "manifest_version": 3,
-  "content_scripts" : [
-    {
-      "matches": ["<all_urls>"], //모든 url에서 동작
-      "js": ["index.js"]
-    }
-   ]
-  
-  "permissions": [ // 확장 프로그램 필요 권한
+  "description": "Extracts the URL and title of the current page.",
+  "permissions": [
     "activeTab"
   ],
-
   "browser_action": {
     "default_title": "Get URL and Title",
     "default_popup": "popup.html"
   },
-
-  
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-
-"action": {
-    "default_popup": "popup.html", // 확장 프로그램 클릭하면 표시되는 팝업
-    "default_icon": {
-      "16": "/images/icons8-color-16.png",
-      "32": "/images/icons8-color-32.png",
-      "48": "/images/icons8-color-48.png",
-      "128": "/images/icons8-color-128.png"
-    }
-  },
-
   "icons": {
     "16": "/images/icons8-color-16.png",
     "32": "/images/icons8-color-32.png",
     "48": "/images/icons8-color-48.png",
     "128": "/images/icons8-color-128.png"
   },
-  //"options_page": "options.html"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
