@@ -11,7 +11,7 @@
    ]
   
   "permissions": [ // 확장 프로그램 필요 권한
-    "activeTab",
+    "activeTab"
   ],
 
   "browser_action": {
@@ -21,7 +21,8 @@
 
   
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
 
 "action": {
