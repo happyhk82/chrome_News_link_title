@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "URL and Title Extractor",
+  "name": "A News Copy",
   "version": "1.0",
   "description": "Extracts the URL and title of the current page.",
   "permissions": [
