@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // 클립보드에 URL과 타이틀 복사      
       copyToClipboard('<A href =' + url + '>##</A>' + ' ' + title);      
-      resultDiv.innerHTML = '<A href =' + url + '>##</A>' + ' ' + title + </p> + </p> + '<A href =' + url + '>##</A>' + ' ' + title; 		
+      resultDiv.innerHTML = '<A href =' + url + '>#news#</A>' + ' ' + title + '<br><br>' + '<A href =' + url + '>#report#</A>' + ' ' + title; 	
 
       
     });
